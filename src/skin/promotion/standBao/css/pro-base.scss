@@ -1,0 +1,321 @@
+/*
+* @Author: suzhihui
+* @Date:   2016-11-25 14:12:55
+* @Last Modified by:   老苏
+* @Last Modified time: 2016-11-25 18:27:35
+*/
+@charset "UTF-8";
+/*==============
+基本默认值
+===============*/
+html { color: #222; }
+
+* { font-family: "Microsoft YaHei","Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif; margin: 0; padding: 0; }
+
+::selection { background-color: #b3d4fc; text-shadow: none; }
+
+ul { margin: 0; padding: 0; }
+
+li { list-style: none; }
+
+/*==============
+工具样式
+===============*/
+.center { display: block; margin-right: auto; margin-left: auto; }
+
+.pull-right { float: right !important; }
+
+.pull-left { float: left !important; }
+
+.text-right { text-align: right !important; }
+
+.text-left { text-align: left !important; }
+
+.text-center { text-align: center !important; }
+
+.hide { text-align: none !important; }
+
+.show { text-align: block !important; }
+
+.invisible { visibility: hidden; }
+
+.text-hide { font: 0/0 a; color: transparent; text-shadow: none; background-color: transparent; border: 0; }
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+
+.clearfix:after { clear: both; }
+
+.clearfix { zoom: 1; }
+
+/*==============
+浏览器更新提示
+===============*/
+.browserupgrade { margin: 0; padding: 16px; padding: 1rem; background: #ccc; text-align: center; }
+
+/*==============
+自定义页面样式
+===============*/
+body { line-height: 1.5; background: #fff; }
+
+a { color: #666; text-decoration: none; }
+
+a:hover, a:active { color: #0ae; text-decoration: underline; }
+
+.w1100 { width: 1100px; margin: 0 auto; }
+
+body{ min-width: 1100px;}
+.pro-banner{ height: 695px; background:url(../img/banner.jpg) center top no-repeat;
+  text-align: center;
+  position: relative;
+  .buy{
+    display: inline-block; border: 4px #fff solid; width: 300px; height: 48px; font-size: 24px; color: #fff; position: absolute; left: 50%; top: 514px; margin-left: -150px;
+  }
+}
+
+@mixin gradient($color1,$color2){
+      background:-webkit-linear-gradient(45deg, $color1, $color2);          /*webkit核心浏览器兼容代码*/
+       background:-o-linear-gradient(45deg, $color1, $color2);                            /*Opera浏览器兼容代码*/
+       background:-moz-linear-gradient(45deg, $color1, $color2);             /*Firefox 浏览器兼容代码*/
+       background:linear-gradient(45deg, $color1, $color2);                       /*标准语法 */
+}
+
+.pro-item{
+  &.pro-item-1{
+    background:#ededed;
+    .pro-categray{
+      @at-root{
+      .cate-item{
+        float: left; background:#fff;  border: 1px #dee3e9 solid;
+        position: relative; width: 228px; padding: 0 12px; margin-left: 110px;margin-top: 30px; transition: all .5s;
+        dt{
+          height: 46px; line-height: 46px; color: #3e4149; font-size: 22px; border-bottom: 1px #b2b9bf dashed;
+        }
+        dd{
+          color: #99a0a7; font-size: 18px;
+          &.item-c{
+            color:#3e4149; border-bottom: 1px #b2b9bf dashed; padding: 20px 0 10px;
+            b{
+              font-size:50px; color: #21decb; font-weight: 400;
+            }
+          }
+          &.item-b{ height: 40px; line-height: 40px;}
+        }
+        &::after{
+          display: inline-block; width: 100%; height: 5px; z-index: 10; top: 0; left: 0; font-size: 0; content:''; position: absolute;
+          @include gradient(#0dd7ef,#21decb);
+        }
+        &:nth-of-type(2){
+          &::after{
+            @include gradient(#fdc304,#f5901c);
+          }
+          dd{
+            &.item-c{
+              b{
+                color: #f5901c;
+              }
+            }
+          }
+        }
+         &:nth-of-type(3){
+          &::after{
+            @include gradient(#e68049,#f45f7b);
+          }
+          dd{
+
+            &.item-c{
+              b{
+                color: #f45f7b;
+              }
+            }
+
+          }
+        }
+
+        &:hover{
+          box-shadow: 3px 3px 3px #ccc;
+        }
+
+      }
+      }
+
+    }
+
+    .pro-new-tip{
+      width: 932px; margin: 0 auto; margin-top: 44px; text-align: center;
+      .new-tip-t {
+        text-align: center; position: relative; background:url(../img/t1.png) center top no-repeat; height: 60px;
+        &::after{
+          display: inline-block; content:''; width: 36px; border-bottom: 4px #7c8187 solid; position: absolute; left: 50%; margin-left: -18px; bottom: -20px;
+        }
+      }
+      .new-tip-c{
+        font-size:18px; color: #7c8187; margin-top: 40px; line-height: 32px; margin-bottom: 50px;
+      }
+    }
+  }
+  &.pro-item-2{
+    background:#fff;
+    .pro-ys{
+      .pro-ys-t{
+        height: 60px; background:url(../img/t2.png) center top no-repeat; margin-top: 60px;
+        &.pro-ys-t2{
+          background:url(../img/t3.png) center top no-repeat;
+        }
+      }
+
+      .pro-ys-c{
+        .ys-item{
+          width: 230px; height: 250px; border: 1px #dee3e9 solid;
+          float: left; margin-left: 35px; padding: 0 26px;  transition: all .5s;
+          dt{ height: 70px;
+
+          }
+          dd{
+            &.item-t{ height: 40px; line-height: 40px; color: #3e4149; font-size: 20px; text-align: center;}
+            &.item-c{ font-size: 16px; color: #99a0a7; line-height: 26px;}
+          }
+          &:nth-of-type(1){
+            dt{
+              background:url(../img/i1.png) center center no-repeat;
+            }
+          }
+          &:nth-of-type(2){
+            dt{
+              background:url(../img/i2.png) center center no-repeat;
+            }
+          }
+          &:nth-of-type(3){
+            dt{
+              background:url(../img/i3.png) center center no-repeat;
+            }
+          }
+          &:nth-of-type(4){
+            dt{
+              background:url(../img/i4.png) center center no-repeat;
+            }
+          }
+
+          &:hover{
+            box-shadow: 3px 3px 3px #ccc;
+          }
+        }
+        .pro-tb{
+          width: 50%; height: 300px; float: left; margin-bottom: 50px;
+          &:nth-of-type(1){
+            background:url(../img/tb1.png) center top no-repeat;
+          }
+          &:nth-of-type(2){
+            background:url(../img/tb2.png) center top no-repeat;
+          }
+        }
+      }
+
+    }
+  }
+  &.pro-item-3{
+    background:#ededed; padding-bottom: 50px;
+    .pro-tips{ width: 900px; margin: 0 auto;}
+    .pro-tips-t{
+      margin-top: 30px;
+      text-align: center; position: relative; background:url(../img/t4.png) center center no-repeat; height: 60px;
+        &::after{
+          display: inline-block; content:''; width: 36px; border-bottom: 4px #7c8187 solid; position: absolute; left: 50%; margin-left: -18px; bottom: -10px;
+        }
+
+      &:nth-of-type(2){
+        background-image: url(../img/t5.png);
+
+      }
+    }
+    ul{
+      margin-top: 50px; color: #7c8287; font-size: 18px;
+      li{
+        height: 40px; line-height: 40px;
+      }
+    }
+
+  }
+}
+
+// 弹窗
+.popBox{
+  position: fixed; top: 160px; width: 520px; left: 50%; margin-left: -260px; z-index: 1001;
+  h1.title{
+    background:#c7dcff url(../img/t-pop.png) center center no-repeat;
+    height: 52px;
+  }
+  .close{
+    display: inline-block; background:url(../img/close.png); width: 21px; height: 21px; position: absolute; right: 14px; top: 14px; transition: all .3s;
+    &:hover{
+      cursor: pointer; transform:rotate(-180deg);
+    }
+  }
+  .popCon{
+    background:#fff;font-size: 18px;
+    padding: 20px 0; line-height: 1.6;
+    ul{
+      li{
+        padding: 6px 0;
+        .title{
+          display: inline-block; width: 20%;  color: #99a0a7; text-align: right;
+        }
+        .p-val{
+          display: inline-block; width: 80%; color: #3e4149;
+          input{ margin-right: 4px;}
+          input[type="text"]{
+            height: 36px; width: 230px; border: 1px #cfd3d8 solid; text-indent: 4px; margin-right: 10px;
+          }
+          input[type="radio"]{
+            width: 16px; height: 16px;
+          }
+          input[type="checkbox"]{
+            width: 16px; height: 16px; vertical-align: middle; margin-top: -2px;
+          }
+        }
+        &.li_2{
+
+          .p-val{
+            a{
+              display:inline-block; height: 30px; padding: 0 10px; color: #fff; font-size: 18px; background:#9ec2ff; float: right; border-radius: 5px;margin-right: 42px;
+            }
+          }
+        }
+        &.li_3{
+          .title{vertical-align: top;}
+          .p-val{
+            label{display: block;
+              input{ margin-right:4px;}
+              &:hover{cursor: pointer;}
+            }
+          }
+        }
+        &.li_4{
+          .p-val{
+            .maxBuy{
+              width: 90px; height: 36px; line-height: 36px; color: #fff; background:#9ec2ff; border-radius: 6px; display: inline-block; text-align: center; vertical-align: middle;
+            }
+          }
+        }
+        &.li_7{
+          a{
+            color: #3e4149;
+          }
+        }
+        &.li_8{
+          .buyNow{
+            width: 230px; height: 40px; background:#3e85ff; text-align: center; display: inline-block; line-height: 40px; color: #fff; margin-right: 16px;
+          }
+        }
+        &.li_9{
+          .p-val{
+            color: #3e85ff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mark{
+  display: -none; position: absolute; width: 100%; height: 100%; z-index: 1000; background: rgba(0, 0, 0, 0.3); top: 0; left: 0;
+}
