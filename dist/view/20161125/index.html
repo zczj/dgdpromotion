@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="http://www.dgd.vc/skin/css/base.css?v=20140708">
     <link rel="stylesheet" href="http://www.dgd.vc/skin/css/main.css?v=20151015">
     <link rel="stylesheet" href="http://www.dgd.vc/skin/css/dgd/base.css">
@@ -54,9 +55,19 @@
     </div>
     </div>
     <div class="header_pd"></div>
-    <link rel="stylesheet" href="/skin/promotion/standBao/css/pro-base.min.css">
+    <script src="http://www.zczj.com/skin/js/jquery.min.js"></script>
+    <script src="/skin/promotion/standBao/js/check.min.js"></script>
+    <script>
+      if (browserRedirect()){
+          setRem();
+          dynamicLoading.css('/skin/promotion/standBao/css/m_base.min.css');
+          //- dynamicLoading.js('http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js');
+      } else {
+          dynamicLoading.css('/skin/promotion/standBao/css/pro-base.min.css');
+      }
+    </script>
     <!--================================================================-->
-    <div class="pro-banner">
+    <div class="pro-banner clearfix">
       <div class="w1100">
         <div class="btn"><a href="javascript:void(0);" class="buy">立即抢购</a></div>
       </div>
@@ -162,6 +173,7 @@
         </div>
       </div>
     </div>
+    <div class="pro-btn"><a href="javascript:void(0);" class="buy"></a></div>
     <div class="mark"></div>
     <div id="popBox" class="popBox">
       <h1 class="title"></h1><span title="关闭" class="close"></span>
@@ -189,7 +201,7 @@
               <label>
                 <input type="checkbox">同意<a href="javascript:void(0);">《站岗宝投资协议》</a>
               </label></span></li>
-          <li class="li_8 li_error"></li>
+          <li class="li_8 li_error"><span class="title"></span><span id="error" class="p-val"></span></li>
           <li class="li_8"><span class="title"></span><span class="p-val"><a href="javascript:void(0);" class="buyNow">立即抢购</a><a href="/mycenter/Automatically" class="autoGo">自动转入</a></span></li>
           <li class="li_9"><span class="title"></span><span class="p-val">（注：每人每天限购50,000元）</span></li>
         </ul>

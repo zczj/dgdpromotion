@@ -2,7 +2,7 @@
 * @Author: suzhihui
 * @Date:   2016-11-25 14:12:55
 * @Last Modified by:   老苏
-* @Last Modified time: 2016-11-25 18:27:35
+* @Last Modified time: 2016-11-28 11:14:10
 */
 @charset "UTF-8";
 /*==============
@@ -67,7 +67,7 @@ body{ min-width: 1100px;}
 .pro-banner{ height: 695px; background:url(../img/banner.jpg) center top no-repeat;
   text-align: center;
   position: relative;
-  .buy{
+  .btn > a{
     display: inline-block; border: 4px #fff solid; width: 300px; height: 48px; font-size: 24px; color: #fff; position: absolute; left: 50%; top: 514px; margin-left: -150px;
   }
 }
@@ -101,7 +101,7 @@ body{ min-width: 1100px;}
           &.item-b{ height: 40px; line-height: 40px;}
         }
         &::after{
-          display: inline-block; width: 100%; height: 5px; z-index: 10; top: 0; left: 0; font-size: 0; content:''; position: absolute;
+          display: inline-block; width: 100%; height: 5px; z-index: 2; top: 0; left: 0; font-size: 0; content:''; position: absolute;
           @include gradient(#0dd7ef,#21decb);
         }
         &:nth-of-type(2){
@@ -238,7 +238,7 @@ body{ min-width: 1100px;}
 }
 
 // 弹窗
-.popBox{
+.popBox{ display: none;
   position: fixed; top: 160px; width: 520px; left: 50%; margin-left: -260px; z-index: 1001;
   h1.title{
     background:#c7dcff url(../img/t-pop.png) center center no-repeat;
@@ -262,7 +262,7 @@ body{ min-width: 1100px;}
         .p-val{
           display: inline-block; width: 80%; color: #3e4149;
           input{ margin-right: 4px;}
-          input[type="text"]{
+          input[type="text"],input[type="password"]{
             height: 36px; width: 230px; border: 1px #cfd3d8 solid; text-indent: 4px; margin-right: 10px;
           }
           input[type="radio"]{
@@ -305,6 +305,11 @@ body{ min-width: 1100px;}
           .buyNow{
             width: 230px; height: 40px; background:#3e85ff; text-align: center; display: inline-block; line-height: 40px; color: #fff; margin-right: 16px;
           }
+          &.li_error{
+            .p-val{
+              color:red; font-size: 12px;
+            }
+          }
         }
         &.li_9{
           .p-val{
@@ -317,5 +322,12 @@ body{ min-width: 1100px;}
 }
 
 .mark{
-  display: -none; position: absolute; width: 100%; height: 100%; z-index: 1000; background: rgba(0, 0, 0, 0.3); top: 0; left: 0;
+  display: none; position: absolute; width: 100%; height: 100%; z-index: 1000; background: rgba(0, 0, 0, 0.3); top: 0; left: 0;
 }
+
+.popBox-myalert{ width:300px; height:200px; margin-top:-100px; margin-left:-150px; text-align:center; z-index:6; top: 50%;}
+    .popBox-myalert .popCon .myalert-tips{font-size:24px; color:#1698ff; text-shadow:6px 6px 6px #fff;}
+    .popBox-myalert .popCon{}
+    .popBox-myalert .myalert-sure{display: inline-block; width: 130px; height: 50px; line-height: 50px; background: #1698ff; text-align: center; color: #fff; margin-left: 10px;border-radius: 10px; cursor:pointer;margin-top:20px;}
+    .popBox-myalert .myalert-sure:hover{text-decoration:none; opacity:0.9;}
+    .mark1{ z-index:5;}

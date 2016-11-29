@@ -1,0 +1,378 @@
+* { font-family: "Microsoft YaHei","Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif; margin: 0; padding: 0; }
+
+::-moz-selection { background-color: #b3d4fc; text-shadow: none; }
+
+::selection { background-color: #b3d4fc; text-shadow: none; }
+
+ul { margin: 0; padding: 0; }
+
+li { list-style: none; }
+
+/*==============
+工具样式
+===============*/
+.center { display: block; margin-right: auto; margin-left: auto; }
+
+.pull-right { float: right !important; }
+
+.pull-left { float: left !important; }
+
+.text-right { text-align: right !important; }
+
+.text-left { text-align: left !important; }
+
+.text-center { text-align: center !important; }
+
+.hide { text-align: none !important; }
+
+.show { text-align: block !important; }
+
+.invisible { visibility: hidden; }
+
+.text-hide { font: 0/0 a; color: transparent; text-shadow: none; background-color: transparent; border: 0; }
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+
+.clearfix:after { clear: both; }
+
+.clearfix { zoom: 1; }
+
+/*==============
+浏览器更新提示
+===============*/
+.browserupgrade { margin: 0; padding: 16px; padding: 1rem; background: #ccc; text-align: center; }
+
+
+@mixin gradient($color1,$color2){
+      background:-webkit-linear-gradient(45deg, $color1, $color2);          /*webkit核心浏览器兼容代码*/
+       background:-o-linear-gradient(45deg, $color1, $color2);                            /*Opera浏览器兼容代码*/
+       background:-moz-linear-gradient(45deg, $color1, $color2);             /*Firefox 浏览器兼容代码*/
+       background:linear-gradient(45deg, $color1, $color2);                       /*标准语法 */
+}
+
+html,body{
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body{
+  background:#ededed;
+  min-width: auto;
+  color: #7c8287;
+  font-size: 0.373333rem;
+}
+.w1100{
+  width: 100%;
+}
+#header,.header_pd,#footer{
+  display: none;
+}
+.pro-banner{
+  height: 17.8rem;
+  background-image:url(../img/m-banner.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: relative;
+  .btn{
+    text-align: center;
+    margin-top: 12.0rem;
+    display: block;
+    .buy{
+      display: inline-block;
+      width: 5.573333rem;
+      height: 0.933333rem;
+      line-height: 0.933333rem;
+      border: 4px #fff solid;
+      text-align: center;
+      font-size: 0.466667rem;
+      color: #fff;
+    }
+  }
+}
+.pro-item{
+  height: 17.8rem;
+  &.pro-item-1{
+    .pro-categray{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cate-item{
+      position: relative;
+      flex:1;
+      width: 7.6rem;
+      height: 3.52rem;
+      background:#fff;
+      margin: 0.32rem auto 0;
+      float: left;
+      font-size: 0.32rem;
+      padding: 0 0.293333rem;
+      &::after{
+        display: inline-block; width: 100%; height: 8px; z-index: 2; top: 0; left: 0; font-size: 0; content:''; position: absolute;
+        @include gradient(#0dd7ef,#21decb);
+      }
+      .item-t{
+        height: 0.8rem;
+        line-height: 0.8rem;
+        border-bottom: 3px #dadee0 dashed;
+        color: #3e4149;
+        font-size:0.426667rem;
+        text-indent: 0.8rem;
+      }
+      .item-c{
+        text-indent: 0.8rem;
+
+        b{
+          color: #21decb;
+          font-size: 1.333333rem;
+        }
+      }
+      .item-b{
+        text-indent: 0.8rem;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        color: #99a0a7;
+        border-top: 3px #dadee0 dashed;
+      }
+      &:nth-of-type(1){
+        .item-t::before{
+          content:'方案一：'
+        }
+      }
+      &:nth-of-type(2){
+        .item-t::before{
+          content:'方案二：'
+        }
+        &::after{
+          @include gradient(#fdc304,#f5901c);
+        }
+        .item-c{
+          b{
+            color: #f5901c;
+          }
+        }
+      }
+      &:nth-of-type(3){
+        .item-t::before{
+          content:'方案三：'
+        }
+        &::after{
+          @include gradient(#e68049,#f45f7b);
+        }
+        .item-c{
+          b{
+            color: #f45f7b;
+          }
+        }
+      }
+    }
+
+    .pro-new-tip{
+      margin-top: 0.533333rem;
+      .new-tip-t{
+        height: 1.826667rem;
+        background:url(../img/m-t1.png) center center no-repeat;
+        background-size: contain;
+      }
+      .new-tip-c{
+        color: #7c8187;
+        font-size:0.373333rem;
+        line-height: 0.666667rem;
+        padding: 0 0.4rem;
+        margin-top: 0.293333rem;
+      }
+    }
+  }
+  &.pro-item-2{
+    height: auto;
+    background:#fff;
+    font-size: 0.306667rem;
+    color: #99a0a7;
+    .pro-ys-t{
+      margin-top: 0.533333rem;
+      height: 1.08rem;
+      background:url(../img/m-t2.png) center center no-repeat;
+      background-size: contain;
+      &.pro-ys-t2{
+        background-image: url(../img/m-t3.png);
+        margin-top: 0.266667rem;
+      }
+    }
+    .pro-ys-c{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      .ys-item{
+        border: 1px #e2e7ec solid;
+        width: 4.08rem;
+        padding:0.48rem;
+        margin: 0.426667rem;
+        line-height: 0.48rem;
+        box-shadow: 3px 3px 3px #ddd;
+        dt{
+          height: 66px; background:url(../img/i1.png) center center no-repeat;
+          background-size: contain;
+        }
+        .item-t{
+          text-align: center;
+          color: #3e4149;
+          font-size: 0.36rem;
+          height: 0.666667rem;
+          line-height: 0.666667rem;
+        }
+        &:nth-of-type(2){
+          dt{
+            background-image:url(../img/i2.png);
+          }
+        }
+        &:nth-of-type(3){
+          dt{
+            background-image:url(../img/i3.png);
+          }
+        }
+        &:nth-of-type(4){
+          dt{
+            background-image:url(../img/i4.png);
+          }
+        }
+      }
+      .pro-tb{
+        width: 100%;
+        height: 568px;
+        background:url(../img/m-tb1.jpg) center center no-repeat;
+        background:contain;
+        margin-top: 0.266667rem;
+        &:nth-of-type(2){
+          background-image: url(../img/m-tb2.png);
+        }
+      }
+    }
+  }
+  &.pro-item-3{
+    padding: 0.266667rem 0.4rem;
+    .pro-tips-t{
+      height: 1.08rem;
+      background:url(../img/m-t4.png) center center no-repeat;
+      background-size: contain;
+      margin-top: 0.533333rem;
+    }
+    ul{
+      margin-top: 0.266667rem;
+      li{
+        line-height: 0.693333rem;
+      }
+      &:nth-of-type(2){
+        li{
+          padding: 0.066667rem 0;
+        }
+      }
+    }
+  }
+}
+
+.pro-btn{
+  .buy{
+    display: block;
+    height: 1.466667rem;
+    background:#002572 url(../img/m-buy.png) center center no-repeat;
+  }
+}
+
+
+// 弹窗
+.popBox{ display: none;
+  position: fixed; top: 0.266667rem; width: 9.333333rem; left: 50%; margin-left: -4.666667rem;; z-index: 1001;
+  h1.title{
+    background:#c7dcff url(../img/t-pop.png) center center no-repeat;
+    height: 1rem;
+    background-size: 30% 70%;
+  }
+  .close{
+    display: inline-block; background:url(../img/close.png) center center no-repeat; width: 1rem; height: 1rem; position: absolute; right: 0; top: 0; transition: all .3s; background-size: 60% 60%;
+    &:hover{
+      cursor: pointer; transform:rotate(-180deg);
+    }
+  }
+  .popCon{
+    background:#fff;font-size: 0.4rem;
+    padding: 0.266667rem 0; line-height: 1.6;
+    ul{
+      li{
+        padding: 0.133333rem 0;
+        .title{
+          display: inline-block; width: 22%;  color: #99a0a7; text-align: right;
+        }
+        .p-val{
+          display: inline-block; width: 78%; color: #3e4149; padding-right: 0.133333rem;
+          input{ margin-right: 0.133333rem;}
+          input[type="text"],input[type="password"]{
+            height: 0.666667rem; width: 3.066667rem; border: 1px #cfd3d8 solid; text-indent: 0.106667rem; margin-right: 10px; font-size: 0.32rem
+          }
+          input[type="radio"]{
+            width: 0.426667rem; height: 0.426667rem; vertical-align: middle;
+          }
+          input[type="checkbox"]{
+            width: 0.426667rem; height: 0.426667rem; vertical-align: middle; margin-top: -2px;
+          }
+        }
+        &.li_2{
+
+          .p-val{
+            a{
+              display:inline-block; height: 0.666667rem; padding: 0 0.266667rem; color: #fff; font-size: 0.4rem; background:#9ec2ff; float: right; border-radius: 0.133333rem;margin-right: 42px;
+            }
+          }
+        }
+        &.li_3{
+          .title{vertical-align: top;}
+          .p-val{
+            label{display: block;
+              input{ margin-right:4px;}
+              &:hover{cursor: pointer;}
+            }
+          }
+        }
+        &.li_4{
+          .p-val{
+            .maxBuy{
+              width: 1.333333rem; height: 0.666667rem; line-height: 0.666667rem; color: #fff; background:#9ec2ff; border-radius: 6px; display: inline-block; text-align: center; vertical-align: middle;
+            }
+          }
+        }
+        &.li_7{
+          a{
+            color: #3e4149;
+          }
+        }
+        &.li_8{
+          .buyNow{
+            width: 4.666667rem; height: 0.8rem; background:#3e85ff; text-align: center; display: inline-block; line-height: 0.8rem; color: #fff; margin-right: 0.266667rem;
+          }
+          &.li_error{
+            height: auto; padding: 0;
+            .p-val{
+              color:red; font-size: 12px;
+            }
+          }
+        }
+        &.li_9{
+          .p-val{
+            color: #3e85ff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mark{
+  display: none; position: absolute; width: 100%; height: 100%; z-index: 1000; background: rgba(0, 0, 0, 0.3); top: 0; left: 0;
+}
+
+.popBox-myalert{ width:300px; height:200px; margin-top:-100px; margin-left:-150px; text-align:center; z-index:6; top: 50%;}
+    .popBox-myalert .popCon .myalert-tips{font-size:24px; color:#1698ff; text-shadow:6px 6px 6px #fff;}
+    .popBox-myalert .popCon{}
+    .popBox-myalert .myalert-sure{display: inline-block; width: 130px; height: 50px; line-height: 50px; background: #1698ff; text-align: center; color: #fff; margin-left: 10px;border-radius: 10px; cursor:pointer;margin-top:20px;}
+    .popBox-myalert .myalert-sure:hover{text-decoration:none; opacity:0.9;}
+    .mark1{ z-index:5;}

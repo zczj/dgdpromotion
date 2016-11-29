@@ -1,9 +1,18 @@
 extends ../../shared/layout
 block content
-  link(rel="stylesheet", href="/skin/promotion/standBao/css/pro-base.min.css")
+  script(src="http://www.zczj.com/skin/js/jquery.min.js")
+  script(src="/skin/promotion/standBao/js/check.min.js")
+  script.
+    if (browserRedirect()){
+        setRem();
+        dynamicLoading.css('/skin/promotion/standBao/css/m_base.min.css');
+        //- dynamicLoading.js('http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js');
+    } else {
+        dynamicLoading.css('/skin/promotion/standBao/css/pro-base.min.css');
+    }
   //================================================================
 
-  .pro-banner
+  .pro-banner.clearfix
     .w1100
       .btn
         a.buy(href="javascript:void(0);") 立即抢购
@@ -90,7 +99,8 @@ block content
           li 5.  站岗宝每天开放有限额度，在限额内，每人每天限购5万，总额不能超过20万
           li 6.  退出流程：先将站岗宝余额转至平台账户余额（实时到账），再申请提现至银行卡
           li 7.  投资时间：截止晚上11点，进行当天结算；如提前投满每日限额，以满额时间为准
-
+  .pro-btn
+    a.buy(href="javascript:void(0);")
   .mark
   .popBox#popBox
     h1.title
@@ -139,8 +149,11 @@ block content
             label
               input(type="checkbox")
               |同意
-              a(href="javascript:void(0);")《站岗宝投资协议》
+              a(href="javascript:void(0);")
+                《站岗宝投资协议》
         li.li_8.li_error
+          span.title
+          span.p-val#error
         li.li_8
           span.title
           span.p-val

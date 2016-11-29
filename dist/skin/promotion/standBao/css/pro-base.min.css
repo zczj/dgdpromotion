@@ -3,7 +3,7 @@
 * @Author: suzhihui
 * @Date:   2016-11-25 14:12:55
 * @Last Modified by:   老苏
-* @Last Modified time: 2016-11-25 18:27:35
+* @Last Modified time: 2016-11-28 11:14:10
 */
 /*==============
 基本默认值
@@ -69,7 +69,7 @@ body { min-width: 1100px; }
 
 .pro-banner { height: 695px; background: url(../img/banner.jpg) center top no-repeat; text-align: center; position: relative; }
 
-.pro-banner .buy { display: inline-block; border: 4px #fff solid; width: 300px; height: 48px; font-size: 24px; color: #fff; position: absolute; left: 50%; top: 514px; margin-left: -150px; }
+.pro-banner .btn > a { display: inline-block; border: 4px #fff solid; width: 300px; height: 48px; font-size: 24px; color: #fff; position: absolute; left: 50%; top: 514px; margin-left: -150px; }
 
 .pro-item.pro-item-1 { background: #ededed; }
 
@@ -85,7 +85,7 @@ body { min-width: 1100px; }
 
 .cate-item dd.item-b { height: 40px; line-height: 40px; }
 
-.cate-item::after { display: inline-block; width: 100%; height: 5px; z-index: 10; top: 0; left: 0; font-size: 0; content: ''; position: absolute; background: -webkit-linear-gradient(45deg, #0dd7ef, #21decb); /*webkit核心浏览器兼容代码*/ /*Opera浏览器兼容代码*/ /*Firefox 浏览器兼容代码*/ background: linear-gradient(45deg, #0dd7ef, #21decb); /*标准语法 */ }
+.cate-item::after { display: inline-block; width: 100%; height: 5px; z-index: 2; top: 0; left: 0; font-size: 0; content: ''; position: absolute; background: -webkit-linear-gradient(45deg, #0dd7ef, #21decb); /*webkit核心浏览器兼容代码*/ /*Opera浏览器兼容代码*/ /*Firefox 浏览器兼容代码*/ background: linear-gradient(45deg, #0dd7ef, #21decb); /*标准语法 */ }
 
 .cate-item:nth-of-type(2)::after { background: -webkit-linear-gradient(45deg, #fdc304, #f5901c); /*webkit核心浏览器兼容代码*/ /*Opera浏览器兼容代码*/ /*Firefox 浏览器兼容代码*/ background: linear-gradient(45deg, #fdc304, #f5901c); /*标准语法 */ }
 
@@ -149,7 +149,7 @@ body { min-width: 1100px; }
 
 .pro-item.pro-item-3 ul li { height: 40px; line-height: 40px; }
 
-.popBox { position: fixed; top: 160px; width: 520px; left: 50%; margin-left: -260px; z-index: 1001; }
+.popBox { display: none; position: fixed; top: 160px; width: 520px; left: 50%; margin-left: -260px; z-index: 1001; }
 
 .popBox h1.title { background: #c7dcff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAAAWCAYAAADzeqMPAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NUExMjFDMTFCMkYwMTFFNjk0NkZFNUZERTc3MkQwQzciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NUExMjFDMTJCMkYwMTFFNjk0NkZFNUZERTc3MkQwQzciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1QTEyMUMwRkIyRjAxMUU2OTQ2RkU1RkRFNzcyRDBDNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1QTEyMUMxMEIyRjAxMUU2OTQ2RkU1RkRFNzcyRDBDNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpISuzgAAAULSURBVHjazFpLjptAEG1HvgA5Qs8R8D5SBJvsmSPAEeAIcARzBHufjVGk7M0RzBHCEZzGepWp6ekPDcxMWmp5hk9TXa8+rwp29/td0Pj2/Uc8/f7+9bMX2lDn6E+J30FsP9asLWfeJzGnPY4byDzpLFKz21gXCfYzABPvDV+0/6+YrnFR86ZmHrDZkgHlOl5j7WTB5o9qnqBY33WXAPkF5Mws565YzzQy3BstNJIb1pZzbvgS+ICcLRwFWBiBdGfziuNS27yA1/ARzQC4wP2XhcpzjRqGIhboqwYwLuMyjQbenjgMaYqYuZqP/e4DBItgZdOoIOgUptqZ96daKCqxUb5xgWtig4XneG5jWX9gm5/mWfz/Q2JftvRAaUAqwEoHJrU6f9gHhhoJhTXwHgov7QYbyxxgSk/+E8yjYxYRSCH9RsovA8/5wuPRc773yE46G1ROHfYK0aOeP9QxYkWVuqiZXBnCTgs/M6U3EChBmBtnKKOGl+r5IfF4XmI5lhkUkBuigikEJoZ7K4fn95aIIzyeZQvdRHIanxXpBEhhIrFGTzLs1UUFgPgHojq20xguv4kLWDGFJhCqXcASc6wf6uHtiqjQGUKxLdztFj4jhaF2lhC5JqrluHdyuNGbMwHkBZtMLSCluIZAn7zvayBry9j6Nyi5CiAnlWGjMTbbe3LsnPCf49rQcE0RJzZ4XwUZFoGpAHyjn70DyAwhtIEVnQxeR8fPmHUACHzDKRSVIc/EgcQs15RC0WLYIF9KBki/4F7J2Kkeghs4grcUY3X+G2dSwHY+z5yEOEyJVS1ED4wMYNJvMyf2W0Jlr+XFkHV6RIPWINeWhXzvyY+C8YrOwthFYM4l7rJb0jQgKyiZNeqhIWWzEtuODIroApUsNdKTMK+k5kTsMFpXU8Ako3TU07OL/K3HHnlRB+5BZsh9P2jkzMOPAYSoZ0pu2T46TcnUGos1NhsxkjKnNh0AWAdjHlnupkgzfAqYpvadAjH9BFlyKJNAOBnqrMHBTAkYaQmxrSV8J452nM14Dqyt2bDcPy6MVr6cmVhy5qO+5GASwWmFvy9rIi++espURPeGSCBZ/iDmeILiEs9zBiaPxHXv2QEaIddRy4mFCC/LYk8zwtWseFUX7znFdTAmUzmQM6LRBwg+sq7Mma03AjzJAInEvIb4wIhH+YGtvIbJN4plPWEXsbozxvqoMNTvOYgAzVRexOqk1rPhHfNG6id26CaNzKMiAHHADFHqgXl5+wFAUllGITyCpx7f8ZmZAvSGsnEzMFsA9BQQWsiCn/H3Vby8V0zRaDggbPQwlCoQmAyy0NuTP4E1a0hovEH+Z+igYPus3wnMgowILdZVYEYrrLhkjLGAQq6MSY4Wjxs9BkLlwF28vM+M8ZwnsV2TnRvMhRGhMzPwQuMGmw607SqNr7ztANE7MQ/BKJk3mQCjXKd704lZFhGcRtgb7/q6NqJ11GRsodzB0cmxkbi5jDuDN3aWiMW/Oti8eaEAbVFOVrY6s/Yw0xabiGdsvjIonFp2g4E82MqNI2O5QphfZVUa+/XRf7ky2sxp7Ddszy5dzWrjEREykNNcO1ZMbLaHV0a2OgnXHLQuie3bl1ZjvRLhbrTQe1e5wb8JqiyKCwFiTZ0ZUnLw/rKt+ZEGeqT3mt30QRfejUWmD7kWlC36ptZ0Q1591LRyHdcHXDGeMTrCfMgHYLy82iRnzwHzrwADAN/CvGqN1XGeAAAAAElFTkSuQmCC) center center no-repeat; height: 52px; }
 
@@ -167,7 +167,7 @@ body { min-width: 1100px; }
 
 .popBox .popCon ul li .p-val input { margin-right: 4px; }
 
-.popBox .popCon ul li .p-val input[type="text"] { height: 36px; width: 230px; border: 1px #cfd3d8 solid; text-indent: 4px; margin-right: 10px; }
+.popBox .popCon ul li .p-val input[type="text"], .popBox .popCon ul li .p-val input[type="password"] { height: 36px; width: 230px; border: 1px #cfd3d8 solid; text-indent: 4px; margin-right: 10px; }
 
 .popBox .popCon ul li .p-val input[type="radio"] { width: 16px; height: 16px; }
 
@@ -189,6 +189,18 @@ body { min-width: 1100px; }
 
 .popBox .popCon ul li.li_8 .buyNow { width: 230px; height: 40px; background: #3e85ff; text-align: center; display: inline-block; line-height: 40px; color: #fff; margin-right: 16px; }
 
+.popBox .popCon ul li.li_8.li_error .p-val { color: red; font-size: 12px; }
+
 .popBox .popCon ul li.li_9 .p-val { color: #3e85ff; }
 
-.mark { display: -none; position: absolute; width: 100%; height: 100%; z-index: 1000; background: rgba(0, 0, 0, 0.3); top: 0; left: 0; }
+.mark { display: none; position: absolute; width: 100%; height: 100%; z-index: 1000; background: rgba(0, 0, 0, 0.3); top: 0; left: 0; }
+
+.popBox-myalert { width: 300px; height: 200px; margin-top: -100px; margin-left: -150px; text-align: center; z-index: 6; top: 50%; }
+
+.popBox-myalert .popCon .myalert-tips { font-size: 24px; color: #1698ff; text-shadow: 6px 6px 6px #fff; }
+
+.popBox-myalert .myalert-sure { display: inline-block; width: 130px; height: 50px; line-height: 50px; background: #1698ff; text-align: center; color: #fff; margin-left: 10px; border-radius: 10px; cursor: pointer; margin-top: 20px; }
+
+.popBox-myalert .myalert-sure:hover { text-decoration: none; opacity: 0.9; }
+
+.mark1 { z-index: 5; }
