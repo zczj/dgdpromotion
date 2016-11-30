@@ -275,7 +275,11 @@ body{
   .buy{
     display: block;
     height: 1.466667rem;
-    background:#002572 url(../img/m-buy.png) center center no-repeat;
+    line-height: 1.466667rem;
+    font-size: 0.613333rem;
+    background:#002572;
+    text-align: center;
+    color: #fff;
   }
 }
 

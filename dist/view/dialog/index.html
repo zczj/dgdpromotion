@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    body{font-size: 12px; padding: 20px;}
+    button{ display: block; width: 100%; padding: 10px; margin: 20px 0; background: green; border-radius: 10px; color: #fff; }
+    #div{ position: fixed; height: 50px; width: 50px; background-color: red; z-index: 100;}
+  </style>
+  <link rel="stylesheet" href="/skin/promotion/dialog/css/dialog.min.css"/>
+</head>
+<body>
+  <div id="div">我是一个层级很高的元素</div>
+  <button id="btn9" style="background:red">延时关闭加回调</button>
+  <button id="btn10" style="background:red">遮罩层点击可关闭</button>
+  <button id="btn1">无参手动关闭</button>
+  <button id="btn2">无按钮，警告框，2s后关闭</button>
+  <button id="btn3">有确认取消的成功框，点按钮关闭</button>
+  <button id="btn4">有确认按钮的警告框，点按钮不关闭，需手动关闭</button>
+  <button id="btn5">多组合按钮，按钮样式可定制</button>
+  <button id="btn6">确认和删除的框，点确认弹出加载框2秒自动关闭，点击删除把上一次框关闭</button>
+  <button id="btn7">动画</button>
+  <script src="/skin/promotion/dialog/js/zepto.1.2.0.min.js"></script>
+  <script src="/skin/promotion/dialog/js/touch.min.js"></script>
+  <script src="/skin/promotion/dialog/js/zepto.dialog.min.js"></script>
+  <script>
+    $('#btn10').tap(function(){
+      $.dialog({
+        type: 'warning',
+        message: '遮罩层点击可关闭',
+        buttons:[{
+          text: '按钮A',
+          type: 'green'
+        },{
+          text: '按钮B',
+          callback: function(){
+            return false;
+          }
+        }],
+        maskOpacity: .4,
+        maskClose: true
+      })
+    })
+    
+    $('#btn9').tap(function(){
+      $.dialog({
+        type: 'warning',
+        message: '延时关闭加回调',
+        delay: 2000,
+        delayCallback: function(){
+          alert('111');
+        }
+      })
+    })
+    
+    $('#btn7').tap(function(){
+      var d = $.dialog({
+        type: 'loading',
+        message: 'xxx',
+        effect: true
+      })
+    })
+    $('#btn6').tap(function(){
+      var dd = $.dialog({
+        type: 'green',
+        message: '我叫警告框',
+        button: [{
+        type: 'red',
+        text: 'ok',
+        callback: function(){
+          $.dialog({
+            type: 'waiting',
+            delay: 2000
+          })
+    
+          return false;
+        }
+        },{
+          type: 'red',
+          text: 'del',
+          callback: function(){
+            $.dialog({
+              type: 'wraning',
+              buttons: [{
+                type: 'wraning',
+                text: '删除之前的弹框！',
+                callback: function(){
+                  dd.close();
+                  return false;
+                }
+              }]
+            })
+    
+            return false;
+          }
+        }]
+      })
+    })
+    
+    $('#btn5').tap(function(){
+      var d = $.dialog({
+        type: 'waiting',
+        message: '多组合，可定制样式',
+        buttons: [{
+          type: 'red',
+          text: 'ok',
+          callback: function(){
+            alert('点击我不会关闭');
+            return false;
+          }
+        },{
+          type: 'green',
+          text: 'ok',
+          callback: function(){
+            alert('点击我会关闭');
+          }
+        },{
+          text: '默认',
+          callback: function(){
+            alert('点击我会关闭');
+          }
+        }]
+      })
+    })
+    
+    $('#btn4').tap(function(){
+      var d = $.dialog({
+        type: 'warning',
+        message: 'tips',
+        buttons: [{
+          type: 'red',
+          text: 'ok',
+          callback: function(){
+            alert('点我不会关闭');
+            return false;
+          }
+        }]
+      })
+    })
+    $('#btn3').tap(function(){
+      var d = $.dialog({
+        type: 'ok',
+        message: '2s',
+        buttons: [{
+          text:'ok'
+        },{
+          text:'no'
+        }]
+      })
+    })
+    $('#btn2').tap(function(){
+      var d = $.dialog({
+        type: 'warning',
+        message: '2s',
+        delay: 2000
+      })
+    })
+    $('#btn1').tap(function(){
+      var d = $.dialog();
+    })
+    
+    
+    
+    
+    //- var d =  $.dialog({
+    //-     width: 130,
+    //-     //- height: 50,
+    //-     //提示信息
+    //-     message:'老苏',
+    //-     //类型
+    //-     type:"waiting",
+    //-     //按钮
+    //-     buttons:[{
+    //-       type:'red',
+    //-       text:'ok',
+    //-       callback:function(){
+    //-         alert('close')
+    //-         return false;
+    //-       }
+    //-     },{
+    //-       type:'green',
+    //-       text:'',
+    //-       callback:function(){
+    //-         alert(1);
+    //-       }
+    //-     }],
+    //-     //延迟多久关闭
+    //-     delay:0,
+    //-     //透明度
+    //-     maskOpacity: 0.4
+    //- });
+    
+    //var b = new Dialog();
+  </script>
+</body>

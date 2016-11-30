@@ -2,7 +2,7 @@
 * @Author: suzhihui
 * @Date:   2016-11-25 14:12:55
 * @Last Modified by:   老苏
-* @Last Modified time: 2016-11-28 11:14:10
+* @Last Modified time: 2016-11-30 15:55:46
 */
 @charset "UTF-8";
 /*==============
@@ -324,10 +324,10 @@ body{ min-width: 1100px;}
 .mark{
   display: none; position: absolute; width: 100%; height: 100%; z-index: 1000; background: rgba(0, 0, 0, 0.3); top: 0; left: 0;
 }
-
-.popBox-myalert{ width:300px; height:200px; margin-top:-100px; margin-left:-150px; text-align:center; z-index:6; top: 50%;}
+.popBox-myalert{ width:300px; height:200px; margin-top:-100px; margin-left:-150px; text-align:center; z-index:1004; top: 50%;}
     .popBox-myalert .popCon .myalert-tips{font-size:24px; color:#1698ff; text-shadow:6px 6px 6px #fff;}
     .popBox-myalert .popCon{}
     .popBox-myalert .myalert-sure{display: inline-block; width: 130px; height: 50px; line-height: 50px; background: #1698ff; text-align: center; color: #fff; margin-left: 10px;border-radius: 10px; cursor:pointer;margin-top:20px;}
     .popBox-myalert .myalert-sure:hover{text-decoration:none; opacity:0.9;}
-    .mark1{ z-index:5;}
+    .mark1{ z-index:1003;}
+    /*xxx*/
