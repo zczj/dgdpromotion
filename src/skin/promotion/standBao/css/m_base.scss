@@ -203,6 +203,7 @@ body{
       display: flex;
       flex-wrap: wrap;
       align-content: space-between;
+      justify-content: center;
       .ys-item{
         border: 1px #e2e7ec solid;
         width: 4.08rem;
@@ -380,3 +381,6 @@ body{
     .popBox-myalert .myalert-sure{display: inline-block; width: 130px; height: 50px; line-height: 50px; background: #1698ff; text-align: center; color: #fff; margin-left: 10px;border-radius: 10px; cursor:pointer;margin-top:20px;}
     .popBox-myalert .myalert-sure:hover{text-decoration:none; opacity:0.9;}
     .mark1{ z-index:5;}
+
+
+  #scrollBar{display: none;}

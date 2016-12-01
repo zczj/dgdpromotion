@@ -3,7 +3,7 @@
 * @Author: suzhihui
 * @Date:   2016-11-25 14:12:55
 * @Last Modified by:   老苏
-* @Last Modified time: 2016-11-30 15:55:46
+* @Last Modified time: 2016-12-01 09:43:14
 */
 /*==============
 基本默认值
@@ -206,3 +206,4 @@ body { min-width: 1100px; }
 .mark1 { z-index: 1003; }
 
 /*xxx*/
+.pro-btn { display: none; }
