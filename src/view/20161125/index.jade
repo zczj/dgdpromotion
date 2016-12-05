@@ -3,11 +3,13 @@ block content
   script(src="http://www.zczj.com/skin/js/jquery.min.js")
   script(src="/skin/promotion/standBao/js/check.min.js")
   script.
-    alert($(window).innerWidth())
     if (browserRedirect()){
         setRem();
-        dynamicLoading.css('/skin/promotion/standBao/css/m_base.min.css');
         //- dynamicLoading.js('http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js');
+        //- dynamicLoading.css('/skin/promotion/standBao/css/m_base_back.min.css');
+        dynamicLoading.css('/skin/promotion/standBao/css/m_base.min.css');
+        //- alert($('meta').attr('content'))
+        $('#header,.header_pd,#footer,#scrollBar').remove();
     } else {
         dynamicLoading.css('/skin/promotion/standBao/css/pro-base.min.css');
     }
@@ -164,7 +166,7 @@ block content
           span.title
           span.p-val （注：每人每天限购50,000元）
 
-
+  script.
   //- <div id="popBox" class="popBox">
   //-     <span title="关闭" class="close"></span>
   //-     <div class="popCon">

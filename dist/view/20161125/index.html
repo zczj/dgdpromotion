@@ -59,17 +59,17 @@
     <script src="http://www.zczj.com/skin/js/jquery.min.js"></script>
     <script src="/skin/promotion/standBao/js/check.min.js"></script>
     <script>
-
       if (browserRedirect()){
           setRem();
-          dynamicLoading.css('/skin/promotion/standBao/css/m_base.min.css');
           //- dynamicLoading.js('http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js');
-          $('body').css('minWidth','320px');
+          //- dynamicLoading.css('/skin/promotion/standBao/css/m_base_back.min.css');
+          dynamicLoading.css('/skin/promotion/standBao/css/m_base.min.css');
+          //- alert($('meta').attr('content'))
+          $('#header,.header_pd,#footer,#scrollBar').remove();
       } else {
           dynamicLoading.css('/skin/promotion/standBao/css/pro-base.min.css');
       }
     </script>
-
     <!--================================================================-->
     <div class="pro-banner clearfix">
       <div class="w1100">
@@ -211,7 +211,8 @@
         </ul>
       </div>
     </div>
-
+    <script></script>
+    
     <div id="footer">
     <div class="warp cf">
     <dl>

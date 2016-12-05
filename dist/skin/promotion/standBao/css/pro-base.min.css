@@ -3,7 +3,7 @@
 * @Author: suzhihui
 * @Date:   2016-11-25 14:12:55
 * @Last Modified by:   老苏
-* @Last Modified time: 2016-12-01 09:43:14
+* @Last Modified time: 2016-12-02 16:18:54
 */
 /*==============
 基本默认值
@@ -74,6 +74,8 @@ body { min-width: 1100px; }
 .pro-item.pro-item-1 { background: #ededed; }
 
 .cate-item { float: left; background: #fff; border: 1px #dee3e9 solid; position: relative; width: 228px; padding: 0 12px; margin-left: 110px; margin-top: 30px; -webkit-transition: all .5s; transition: all .5s; }
+
+.cate-item:hover { cursor: pointer; }
 
 .cate-item dt { height: 46px; line-height: 46px; color: #3e4149; font-size: 22px; border-bottom: 1px #b2b9bf dashed; }
 
@@ -179,9 +181,17 @@ body { min-width: 1100px; }
 
 .popBox .popCon ul li.li_3 .p-val label { display: block; }
 
+.popBox .popCon ul li.li_3 .p-val label:nth-of-type(1) { color: #21decb; }
+
+.popBox .popCon ul li.li_3 .p-val label:nth-of-type(2) { color: #f5901c; }
+
+.popBox .popCon ul li.li_3 .p-val label:nth-of-type(3) { color: #f45f7b; }
+
 .popBox .popCon ul li.li_3 .p-val label input { margin-right: 4px; }
 
 .popBox .popCon ul li.li_3 .p-val label:hover { cursor: pointer; }
+
+.popBox .popCon ul li.li_3 .p-val label.black { color: #3e4149; }
 
 .popBox .popCon ul li.li_4 .p-val .maxBuy { width: 90px; height: 36px; line-height: 36px; color: #fff; background: #9ec2ff; border-radius: 6px; display: inline-block; text-align: center; vertical-align: middle; }
 
