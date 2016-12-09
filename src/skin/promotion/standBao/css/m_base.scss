@@ -3,6 +3,7 @@
 ::-moz-selection { background-color: #b3d4fc; text-shadow: none; }
 
 ::selection { background-color: #b3d4fc; text-shadow: none; }
+input {-webkit-appearance:none; /*去除input默认样式*/}
 
 ul { margin: 0; padding: 0; }
 
@@ -36,7 +37,6 @@ li { list-style: none; }
 .clearfix:after { clear: both; }
 
 .clearfix { zoom: 1; }
-
 /*==============
 浏览器更新提示
 ===============*/
@@ -297,7 +297,7 @@ body{
 
 // 弹窗
 .popBox{ display: none;
-  position: fixed; top: 0.266667rem; width: 96%; left: 50%; margin-left: -48%; z-index: 1001;
+  position: fixed; top: 2.266667rem; width: 96%; left: 50%; margin-left: -48%; z-index: 1001;
   h1.title{
     background:#c7dcff url(../img/t-pop.png) center center no-repeat;
     height: 1rem;
@@ -386,6 +386,11 @@ body{
             }
           }
         }
+        &.li_6{
+          #captcha_div{
+            text-align: center;
+          }
+        }
         &.li_7{
           a{
             color: #3e4149;
@@ -393,7 +398,10 @@ body{
         }
         &.li_8{
           .buyNow{
-            width: 4.666667rem; height: 0.8rem; background:#3e85ff; text-align: center; display: inline-block; line-height: 0.8rem; color: #fff; margin-right: 0.266667rem;
+            width: 4.666667rem; height: 0.8rem; background:#3e85ff; text-align: center; display: inline-block; line-height: 0.8rem; color: #fff; margin-right: 0.266667rem; cursor: pointer; border: none; font-size:0.4rem;
+          }
+          .buyNow[disabled]{
+            cursor: not-allowed; opacity: 0.65;
           }
           &.li_error{
             height: auto; padding: 0;

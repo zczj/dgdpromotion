@@ -2,13 +2,19 @@
 * @Author: suzhihui
 * @Date:   2016-07-19 09:32:40
 * @Last Modified by:   老苏
-* @Last Modified time: 2016-11-29 18:25:35
+* @Last Modified time: 2016-12-07 14:24:51
 */
 
 $(window).on('scroll', function () {
     $('.mark').height($(document).height())
-
 });
+$(window).on('resize', function () {
+    var iH = $('#popBox').height();
+    var fH = $(document).height();
+    var top = (fH - iH)/2 + 'px';
+    $('#popBox').css('top',top);
+
+})
 $('.buy').click(function () {
     if ($(this).hasClass('no-hoved')) {
         return;

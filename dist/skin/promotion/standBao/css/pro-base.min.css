@@ -3,7 +3,7 @@
 * @Author: suzhihui
 * @Date:   2016-11-25 14:12:55
 * @Last Modified by:   老苏
-* @Last Modified time: 2016-12-02 16:18:54
+* @Last Modified time: 2016-12-08 17:52:17
 */
 /*==============
 基本默认值
@@ -195,9 +195,13 @@ body { min-width: 1100px; }
 
 .popBox .popCon ul li.li_4 .p-val .maxBuy { width: 90px; height: 36px; line-height: 36px; color: #fff; background: #9ec2ff; border-radius: 6px; display: inline-block; text-align: center; vertical-align: middle; }
 
+.popBox .popCon ul li.li_6 #captcha_div { text-align: center; }
+
 .popBox .popCon ul li.li_7 a { color: #3e4149; }
 
-.popBox .popCon ul li.li_8 .buyNow { width: 230px; height: 40px; background: #3e85ff; text-align: center; display: inline-block; line-height: 40px; color: #fff; margin-right: 16px; }
+.popBox .popCon ul li.li_8 .buyNow { width: 230px; height: 40px; background: #3e85ff; text-align: center; display: inline-block; line-height: 40px; color: #fff; margin-right: 16px; cursor: pointer; border: none; }
+
+.popBox .popCon ul li.li_8 .buyNow[disabled] { cursor: not-allowed; opacity: 0.65; }
 
 .popBox .popCon ul li.li_8.li_error .p-val { color: red; font-size: 12px; }
 
