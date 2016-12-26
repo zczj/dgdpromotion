@@ -1,3 +1,278 @@
 extends ../../shared/layout
 block content
-  script(src="/skin/promotion/standBao/js/check.min.js")
+  link(rel="stylesheet", href="/skin/promotion/fhReport/css/pro-base.min.css")
+  link(rel="stylesheet", href="/skin/promotion/dialog/css/dialog.min.css")
+  link(rel="stylesheet", href="/skin/promotion/money/css/money.min.css")
+
+
+  #pro-warp
+    .pro-banner
+      .pro-warp
+        .pro-logo-t
+        .pro-logo-warp
+          .logo-share
+          .logo-crile
+          .logo-txt
+            p 大股东年度分红报告
+            p 告诉你什么才是真正的小投资大回报！
+            p 精选更多优质项目
+            p 是我们感谢投资人最好的方式~
+    .pro-item.pro-item-1
+      .pro-warp
+        .pro-item-tag 分红
+        .pro-item-t 最稳健的店铺项目
+        .pro-item-con
+          .pro-item-list.clearfix
+            dl.pro-list(v-for="item in items.list" v-cloak="")
+              dt
+                img(:src="item.src", :alt="item.name")
+
+              dd.n {{item.name}}
+              dd.pre {{item.pre}}
+              dd.pro-status {{item.status}}
+              dd.info
+                p {{item.info.ref[0]}}
+                p {{item.info.ref[1]}}
+                p {{item.info.ref[2]}}
+                p.red {{item.info.red}}
+    .pro-item.pro-item-2
+      .pro-warp
+        .pro-item-tag 分红
+        .pro-item-t 最亮眼的文化类众筹项目
+        .pro-item-con
+          dl
+            dt
+              img(src="/skin/promotion/fhReport/img/wyl.png", alt="")
+            dd.intrdius.
+              高颜值阵容，国民老公宋仲基、第一天团BIGBANG、<br>
+              叱咤乐坛陈奕迅，只在文娱宝一号。
+            dd.name 文娱宝
+            dd.prent 108%
+            dd.pro-status (投资回报率)
+            dd.info
+              p 投资时间：2016年2月
+              p 首次分红：2016年3月
+              p 历时仅仅4个月
+    .pro-item.pro-item-3
+      .pro-warp
+        .pro-item-tag 利好
+        .pro-item-t 成功进入下一轮项目
+        .pro-item-con
+          .pro-item-list.clearfix
+            dl.pro-list-2(v-for="item in items.list2" v-cloak="")
+              dt
+                img(:src="item.src", :alt="item.name")
+              dd.n {{item.name}}
+              dd.txt.
+                {{item.txt}}
+              dd.info
+                p {{item.info.ref[0]}}
+                p {{item.info.ref[1]}}
+                p {{item.info.ref[2]}}
+    .pro-item.pro-item-4
+      .pro-warp
+        .pro-item-tag 利好
+        .pro-item-t 成功退出的项目
+        .pro-item-con
+          dl
+            dt
+              img(src="/skin/promotion/fhReport/img/mxy.png", alt="漫心园")
+            dd.name 漫心园
+            dd.info
+              p 投资时间：2016年7月
+              p 退出时间：2016年10月
+              p 历时短短3个月成功退出
+    .pro-item.pro-item-5
+      .pro-warp
+        .pro-item-tag 案例
+        .pro-item-t 之家投资团队投资案例
+        .pro-item-con
+          .pro-item-list.clearfix
+            dl.pro-list(v-for="item in items.list3" v-cloak="")
+              dt
+                img(:src="item.src", :alt="item.name")
+
+              dd.n {{item.name}}
+              dd.pre {{item.pre}}
+              dd.pro-status {{item.status}}
+              dd.info
+                p {{item.info.ref[0]}}
+                p {{item.info.ref[1]}}
+          .pro-item-list.clearfix
+            dl.pro-list(v-for="item in items.list4" v-cloak="")
+              dt
+                img(:src="item.src", :alt="item.name")
+
+              dd.n {{item.name}}
+              dd.pre {{item.pre}}
+              dd.pro-status {{item.status}}
+              dd.info
+                p {{item.info.ref[0]}}
+                p {{item.info.ref[1]}}
+
+    .pro-item.pro-item-6
+      .pro-warp
+        .pro-item-tag 稳赚
+        .pro-item-t 站岗宝
+        .pro-item-con
+          dl
+            dt
+              img(src="/skin/promotion/fhReport/img/stb.png", alt="")
+            dd.name 自2016年8月15日以来，站岗宝共计为投资人赚取站岗利息：
+            dd.num
+              b 347,441.43
+              span (元)
+
+  script(src="//cdn.bootcss.com/vue/2.0.5/vue.min.js")
+  script(src="/skin/promotion/dialog/js/zepto.1.2.0.min.js")
+  script(src="/skin/promotion/dialog/js/zepto.dialog.min.js")
+  script(src="/skin/promotion/money/js/setCooke.min.js")
+  script.
+    ;(function($){
+      if(getCookie('moneyPop')){
+        return;
+      }else{
+        SetCookie('moneyPop','0');
+        $.dialog({
+            width: 416,
+            height: 363,
+            type: 'warning',
+            buttons:[{
+              text: ' ',
+              type: 'green',
+              callback: function(){
+                window.location='http://www.dgd.vc/special/FhReport';
+                return false;
+              }
+            },{
+              text: ' ',
+              type: 'red'
+            }],
+            effect: 1,
+            maskClose: true
+        })
+      }
+
+    })(Zepto);
+
+    var data={'list':[{
+      src:'/skin/promotion/fhReport/img/l1.png',
+      name:'唱吧',
+      pre: '84%',
+      status:'(投资回报率)',
+      info:{ref:['投资时间：2016年2月','首次分红：2016年3月','投资年限：3年以上'],
+            red:'已成功分红11个月'
+      }
+    },{
+      src:'/skin/promotion/fhReport/img/l2.png',
+      name:'真功夫（广州店）',
+      pre: '57.5%',
+      status:'(投资回报率)',
+      info:{ref:['投资时间：2016年6月','首次分红：2016年7月','投资年限：4年以上'],
+             red:'已成功分红5个月'
+      }
+    },{
+      src:'/skin/promotion/fhReport/img/l2.png',
+      name:'真功夫(中山店)',
+      pre: '64%',
+      status:'(投资回报率)',
+      info:{ref:['投资时间：2016年6月','首次分红：2016年7月','投资年限：4年'],
+            red:'已成功分红5个月'
+      }
+    },{
+      src:'/skin/promotion/fhReport/img/l2.png',
+      name:'真功夫(中山店)',
+      pre: '78.8%',
+      status:'(投资回报率)',
+      info:{ref:['投资时间：2016年6月','首次分红：2016年7月','投资年限：4年'],
+            red:'已成功分红5个月'
+      }
+    }],
+    'list2':[{
+      src:'/skin/promotion/fhReport/img/l01.png',
+      name:'橙蟹',
+      txt: '橙蟹 |（ORAN CRAB）是一个用技术为小微企业提供会计，审计，内控，信用服务的财务平台',
+      info:{ref:['投资时间：2016年1月','首次分红：2016年11月','历时10个月']
+      }
+    },{
+      src:'/skin/promotion/fhReport/img/l02.png',
+      name:'影大人',
+      txt: '影大人影视众筹平台坚持以客户为本的专业态度，为客户提供了快速便捷的影视投资服务体验!',
+      info:{ref:['投资时间：2016年1月','首次分红：2016年6月','历时5个月']
+      }
+    }],
+    'list3':[{
+          src:'/skin/promotion/fhReport/img/l01.png',
+          name:'橙蟹',
+          pre: '160%',
+          status:'（账面收益）',
+          info:{ref:['所属行业：企业服务','投资时间：2016年'],
+          }
+        },{
+          src:'/skin/promotion/fhReport/img/l03.png',
+          name:'WE假装情侣',
+          pre: '400%',
+          status:'（账面收益）',
+          info:{ref:['所属行业：情感社交','投资时间：2015年'],
+          }
+        },{
+          src:'/skin/promotion/fhReport/img/l04.png',
+          name:'今晚去哪玩',
+          pre: '100%',
+          status:'（账面收益）',
+          info:{ref:['所属行业：O2O','投资时间：2015年'],
+          }
+        },{
+          src:'/skin/promotion/fhReport/img/l05.png',
+          name:'结婚说',
+          pre: '200%',
+          status:'（账面收益）',
+          info:{ref:['所属行业：O2O','投资时间：2015年'],
+          }
+        }],
+        'list4':[{
+          src:'/skin/promotion/fhReport/img/l06.png',
+          name:'云筹',
+          pre: '625%',
+          status:'（账面收益）',
+          info:{ref:['所属行业：互联网金融','投资时间：2014年'],
+          }
+        },{
+          src:'/skin/promotion/fhReport/img/l07.png',
+          name:'红岭创投',
+          pre: '1625%',
+          status:'（账面收益）',
+          info:{ref:['互联网金融','投资时间：2010年'],
+          }
+        },{
+          src:'/skin/promotion/fhReport/img/l08.png',
+          name:'12308',
+          pre: '400%',
+          status:'（账面收益）',
+          info:{ref:['所属行业：汽车交通','投资时间：2013年'],
+          }
+        },{
+          src:'/skin/promotion/fhReport/img/l09.png',
+          name:'小爱爱',
+          pre: '275%',
+          status:'（账面收益）',
+          info:{ref:['所属行业：智能硬件','投资时间：2015年'],
+          }
+        }]
+        }
+    var pro = new Vue({
+    el: "#pro-warp",
+    data: {
+      items: data
+    }
+    });
+
+
+
+
+
+
+
+
+
+

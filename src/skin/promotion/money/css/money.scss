@@ -1,0 +1,51 @@
+.g-dialog-contianer {
+  .dialog-window{
+      background:url(../img/money.png);
+      position: relative;
+      .dialog-header{
+        &.warning{
+          display: inline-block;
+          position: absolute;
+          width: 56px;
+          height: 68px;
+          background:url(../img/shark.png) center center no-repeat;
+          transform: rotate(0deg);
+          border: none;
+          right: -35px;
+          top: 90px;
+          animation: pound .5s infinite;
+          transform-origin: center;
+          &::before,&::after{
+            display: none;
+          }
+        }
+      }
+      .dialog-footer{
+        button{
+          cursor: pointer;
+          position: absolute;
+          &.green{
+            width: 150px;
+            height: 50px;
+            bottom: 80px;
+            transform:rotate(-5deg);
+            background:none;
+          }
+          &.red{
+            width: 75px;
+            height: 35px;
+            right: -5px;
+            top: 20px;
+            background:none;
+          }
+        }
+      }
+  }
+}
+
+
+@keyframes pound {
+  from { transform: none; }
+  50% { transform: scale(1.4); }
+  to { transform: none; }
+}

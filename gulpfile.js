@@ -42,11 +42,11 @@ gulp.task('img', function() {
     // .pipe(notify({ message: 'Images task complete' }));
 });
 
-//第三方js
-// gulp.task('plugs', function () {
-//   return gulp.src(['src/skin/plugs/*','src/skin/plugs/**/*'])
-//     .pipe(gulp.dest('dist/skin/plugs'))
-// })
+// 第三方js
+gulp.task('plugs', function () {
+  return gulp.src(['src/skin/plugs/*','src/skin/plugs/**/*'])
+    .pipe(gulp.dest('dist/skin/plugs'))
+})
 
 //jade
 gulp.task('jade',function () {
@@ -63,7 +63,7 @@ gulp.task('clean', function () {
 
 
 gulp.task('build', function () {
-  gulp.start('css','js','img','jade');
+  gulp.start('css','js','img','jade','plugs');
 });
 
 gulp.task('serve',function () {

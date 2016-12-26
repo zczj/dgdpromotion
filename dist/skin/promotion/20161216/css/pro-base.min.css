@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/*
+* @Author: suzhihui
+* @Date:   2016-12-16 09:41:35
+* @Last Modified by:   老苏
+* @Last Modified time: 2016-12-16 10:45:07
+*/
+/*==============
+基本默认值
+===============*/
+[v-cloak] { display: none; }
+
+html { color: #222; font-size: 62.5%; }
+
+* { font-family: "Microsoft YaHei","Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; -webkit-tap-highlight-color: transparent; }
+
+::-moz-selection { background-color: #b3d4fc; text-shadow: none; }
+
+::selection { background-color: #b3d4fc; text-shadow: none; }
+
+ul { margin: 0; padding: 0; }
+
+li { list-style: none; }
+
+button:hover { cursor: pointer; }
+
+/*==============
+工具样式
+===============*/
+.center { display: block; margin-right: auto; margin-left: auto; }
+
+.pull-right { float: right !important; }
+
+.pull-left { float: left !important; }
+
+.text-right { text-align: right !important; }
+
+.text-left { text-align: left !important; }
+
+.text-center { text-align: center !important; }
+
+.hide { text-align: none !important; }
+
+.show { text-align: block !important; }
+
+.invisible { visibility: hidden; }
+
+.text-hide { font: 0/0 a; color: transparent; text-shadow: none; background-color: transparent; border: 0; }
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+
+.clearfix:after { clear: both; }
+
+.clearfix { zoom: 1; }
+
+/*==============
+浏览器更新提示
+===============*/
+.browserupgrade { margin: 0; padding: 16px; padding: 1rem; background: #ccc; text-align: center; }
+
+/*==============
+自定义页面样式
+===============*/
+body { line-height: 1.5; background: #fff; }
+
+a { color: #666; text-decoration: none; }
+
+a:hover, a:active { color: #0ae; text-decoration: underline; }
+
+.w1100 { width: 1100px; margin: 0 auto; }
+
+body { min-width: 1100px; }
+
+table { border-collapse: separate; border-spacing: 0; }
+
+.pro-warp .bg { height: 400px; background: url(../img/bg_01.jpg) center top no-repeat; }
+
+.pro-warp .bg .w1100 { width: 1100px; margin: 0 auto; height: 100%; position: relative; }
+
+.pro-warp .bg .pro-btn { display: inline-block; width: 200px; height: 50px; left: 50%; margin-left: -100px; position: absolute; z-index: 1000; }
+
+.pro-warp .bg-1 { background-image: url(../img/bg_01.jpg); }
+
+.pro-warp .bg-1 .pro-btn { margin-left: -315px; bottom: -30px; }
+
+.pro-warp .bg-2 { background-image: url(../img/bg_02.jpg); }
+
+.pro-warp .bg-3 { background-image: url(../img/bg_03.jpg); }
+
+.pro-warp .bg-4 { background-image: url(../img/bg_04.jpg); }
+
+.pro-warp .bg-5 { background-image: url(../img/bg_05.jpg); }
+
+.pro-warp .bg-5 .pro-btn { top: 216px; }
+
+.pro-warp .bg-6 { background-image: url(../img/bg_06.jpg); }
+
+.pro-warp .bg-7 { background-image: url(../img/bg_07.jpg); }
+
+.pro-warp .bg-8 { background-image: url(../img/bg_08.jpg); }
+
+.pro-warp .bg-9 { background-image: url(../img/bg_09.jpg); }
+
+.pro-warp .bg-10 { background-image: url(../img/bg_10.jpg); }
+
+.pro-warp .bg-11 { background-image: url(../img/bg_11.jpg); }
+
+.pro-warp .bg-12 { background-image: url(../img/bg_12.jpg); height: 189px; }
+
+.pro-warp .bg-12 .pro-btn { bottom: 22px; }

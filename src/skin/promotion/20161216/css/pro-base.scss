@@ -1,0 +1,56 @@
+/*
+* @Author: suzhihui
+* @Date:   2016-12-16 09:41:35
+* @Last Modified by:   老苏
+* @Last Modified time: 2016-12-16 10:45:07
+*/
+@import "../../common/css/pro-common.scss";
+.pro-warp{
+  .bg{
+    height: 400px;
+    background:url(../img/bg_01.jpg) center top no-repeat;
+    .w1100{
+      width: 1100px;
+      margin: 0 auto;
+      height: 100%;
+      position: relative;
+    }
+    .pro-btn{
+      display: inline-block;
+      width: 200px;
+      height: 50px;
+      left: 50%;
+      margin-left: -100px;
+      position: absolute;
+      z-index: 1000;
+    }
+    &-1{background-image: url(../img/bg_01.jpg);
+      .pro-btn{
+        margin-left: -315px;
+        bottom: -30px;
+      }
+    }
+    &-2{background-image: url(../img/bg_02.jpg);}
+    &-3{background-image: url(../img/bg_03.jpg);}
+    &-4{background-image: url(../img/bg_04.jpg);}
+    &-5{
+      background-image: url(../img/bg_05.jpg);
+      .pro-btn{
+        top: 216px;
+      }
+    }
+    &-6{background-image: url(../img/bg_06.jpg);}
+    &-7{background-image: url(../img/bg_07.jpg);}
+    &-8{background-image: url(../img/bg_08.jpg);}
+    &-9{background-image: url(../img/bg_09.jpg);}
+    &-10{background-image: url(../img/bg_10.jpg);}
+    &-11{background-image: url(../img/bg_11.jpg);}
+    &-12{
+      background-image: url(../img/bg_12.jpg);
+      height: 189px;
+      .pro-btn{
+        bottom: 22px;
+      }
+    }
+  }
+}

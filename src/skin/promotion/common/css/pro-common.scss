@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/*==============
+基本默认值
+===============*/
+[v-cloak] {display: none;}
+html { color: #222; font-size:62.5%;}
+
+* { font-family: "Microsoft YaHei","Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif; margin: 0; padding: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection { background-color: #b3d4fc; text-shadow: none; }
+
+ul { margin: 0; padding: 0; }
+
+li { list-style: none; }
+
+button:hover{cursor: pointer;}
+
+/*==============
+工具样式
+===============*/
+.center { display: block; margin-right: auto; margin-left: auto; }
+
+.pull-right { float: right !important; }
+
+.pull-left { float: left !important; }
+
+.text-right { text-align: right !important; }
+
+.text-left { text-align: left !important; }
+
+.text-center { text-align: center !important; }
+
+.hide { text-align: none !important; }
+
+.show { text-align: block !important; }
+
+.invisible { visibility: hidden; }
+
+.text-hide { font: 0/0 a; color: transparent; text-shadow: none; background-color: transparent; border: 0; }
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+
+.clearfix:after { clear: both; }
+
+.clearfix { zoom: 1; }
+
+/*==============
+浏览器更新提示
+===============*/
+.browserupgrade { margin: 0; padding: 16px; padding: 1rem; background: #ccc; text-align: center; }
+
+/*==============
+自定义页面样式
+===============*/
+body { line-height: 1.5; background: #fff; }
+
+a { color: #666; text-decoration: none; }
+
+a:hover, a:active { color: #0ae; text-decoration: underline; }
+
+.w1100 { width: 1100px; margin: 0 auto; }
+
+body{ min-width: 1100px;}
+table{
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+@mixin gradient($color1,$color2){
+      background:-webkit-linear-gradient(45deg, $color1, $color2);          /*webkit核心浏览器兼容代码*/
+       background:-o-linear-gradient(45deg, $color1, $color2);                            /*Opera浏览器兼容代码*/
+       background:-moz-linear-gradient(45deg, $color1, $color2);             /*Firefox 浏览器兼容代码*/
+       background:linear-gradient(45deg, $color1, $color2);                       /*标准语法 */
+}

@@ -1,0 +1,297 @@
+/*
+* @Author: suzhihui
+* @Date:   2016-12-20 14:42:52
+* @Last Modified by:   老苏
+* @Last Modified time: 2016-12-22 19:56:15
+*/
+@import "../../common/css/pro-common.scss";
+html,body{
+  background:#fff;
+}
+
+.pro-warper{
+  .bg{
+    height: 400px;
+    background:url(../img/bg_01.jpg) center top no-repeat;
+    &.bg-2{background-image: url(../img/bg_02.jpg)}
+    &.bg-3{background-image: url(../img/bg_03.jpg)}
+    &.bg-4{background-image: url(../img/bg_04.jpg)}
+    &.bg-5{background-image: url(../img/bg_05.jpg)}
+    &.bg-6{background-image: url(../img/bg_06.jpg)}
+    &.bg-7{background-image: url(../img/bg_07.jpg)}
+    &.bg-8{background-image: url(../img/bg_08.jpg)}
+    &.bg-9{background-image: url(../img/bg_09.jpg)}
+    &.bg-10{background-image: url(../img/bg_10.jpg)}
+    &.bg-11{background-image: url(../img/bg_11.jpg)}
+    &.bg-12{background-image: url(../img/bg_12.jpg);}
+    img{display: none}
+  }
+}
+
+@mixin w--1100() {
+  .pro-warper{
+
+    .bg{
+      height: auto;
+      .pc{
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .w1100,.warp{
+    width: 100%;
+  }
+  .pro-warper{
+    width: 100%;
+    margin: 0 auto;
+  }
+  html,body{
+    overflow-x: hidden;
+  }
+  #header,header{
+    display: none;
+  }
+  .header_pd{display: none;}
+  body{
+    min-width:100%;
+  }
+  .pro-banner{
+    height: 400px;
+    background-size: cover;
+    .sgd-buyNow{
+      width: 120px;
+      height: 36px;
+      left: 50%;
+      background-size: cover;
+      margin-left:-160px;
+      bottom: 100px;
+    }
+  }
+  #footer{
+    &>.warp{
+      display: none;
+    }
+    .footer_bt{
+      margin-top: 0;
+    }
+  }
+}
+
+@mixin w--750() {
+  .pro-warper{
+    .bg{
+      height: auto;
+      .pc{
+        display: none;
+        width: 100%;
+      }
+      .mobile{
+        display: block;
+        width:100%;
+      }
+    }
+  }
+  .pro-banner{
+    height: auto;
+    .w1100 img{
+      width: 100%;
+      display: block;
+    }
+    .sgd-buyNow{
+      bottom: auto;
+      border:1px #fff solid;
+      border-radius: 10px;
+      top: 32%;
+      left: 50%;
+      margin-left: -60px;
+      background-image: none;
+      text-align: center;
+      color: #fff;
+      font-size: 1.8rem;
+      line-height: 34px;
+      padding: 0;
+      &::after{
+        content:'立即购买';
+      }
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+  .pro-warper{
+    .sgd-tips{
+      background:none;
+      .sgd-tips-list{
+        padding: 10px 0;
+        font-size: 2rem;
+        line-height: 2.2rem;
+        li{
+          padding: .4rem 0px .4rem 20px;
+          position: relative;
+          &::before{
+            position: absolute;
+            left: .4rem;
+            top: 1rem;
+            margin-right: 0;
+            background:#d3335c;
+          }
+        }
+      }
+    }
+    .sgd-info-warp{
+       .sgd-info-list{
+        &>p{
+          position: relative;
+          padding-left: 20px;
+          &::before{
+            display: inline-block;
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background:#d3335c;
+            position: absolute;
+            left: 0;
+            top: 1.6rem;
+            vertical-align: top;
+          }
+          &.pro-img{
+            &::before{
+              display: none;
+            }
+          }
+        }
+       }
+    }
+    .sgd-note-warp{
+      padding: 10px 0;
+      li{
+        padding-left: 20px;
+        position: relative;
+        &::before{
+          position: absolute;
+          top: 1.5rem;
+          left: 0;
+          background:#d3335c;
+        }
+      }
+    }
+    .sgd-step-warp{
+      dl{
+        display: block;
+        padding: 0;
+        overflow: hidden;
+        height: 110px;
+        dt,dd{
+          float: left;
+          width: 50%;
+          height: 90px;
+          line-height: 90px;
+
+        }
+        dt{
+          float: right;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-image: url(../img/m-p1.png);
+          background-size: 105px 89px;
+          &::after{
+            background:#d3335c;
+            width: 14px;
+            height: 14px;
+            border-radius: 7px;
+            left: 0;
+            bottom: 50%;
+            margin-bottom: -14px;
+            margin-left: -7px;
+            z-index: 10;
+          }
+        }
+        dd{
+          color: #6b7c93;
+          font-size: 2rem;
+          font-weight: 700;
+          &::before{
+            height: 100%;
+            width: 2px;
+            background:#b283be;
+            bottom: auto;
+            right: 50%;
+            left: auto;
+          }
+        }
+        &:nth-of-type(1){
+          dd{
+            &::before{
+              width: 2px;
+              right: 50%;
+              height: 60%;
+              bottom: 0;
+            }
+          }
+        }
+        &:nth-of-type(5){
+          dd{
+            &::before{
+              width: 2px;
+              right: 50%;
+              height: 40%;
+            }
+          }
+        }
+
+        &:nth-of-type(2){
+          dt{
+            background-image: url(../img/m-p2.png);}
+          }
+        &:nth-of-type(3){
+          dt{
+            background-image: url(../img/m-p3.png);}
+          }
+        &:nth-of-type(4){
+          dt{
+            background-image: url(../img/m-p4.png);}
+          }
+        &:nth-of-type(5){
+          dt{
+            background-image: url(../img/m-p5.png);}
+          }
+      }
+    }
+  }
+
+  #footer .footer_bt{
+    height: auto;
+    line-height: 24px;
+    padding: 8px 0;
+    p>span{
+      display: block;
+    }
+  }
+  .sgd-buyNow{
+    background:none;
+    color: #fff;
+    border: 2px #d3335c solid;
+    color: #d3335c;
+    padding: .6rem 1rem;
+    margin-bottom: 20px;
+    height: auto;
+    font-size:3.5rem;
+    border-radius: 15px;
+    &::after{
+      content: '立即购买';
+    }
+    &:hover{
+      color: #d3335c;
+    }
+  }
+}
+
+@media only screen and (max-width: 68.75em) {
+  @include w--1100();
+}
+
+@media only screen and (max-width: 46.875em){
+  @include w--750();
+}
