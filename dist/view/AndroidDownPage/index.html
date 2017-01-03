@@ -56,7 +56,41 @@
     </div>
     </div>
     </div>
-    <div class="header_pd"></div><div id="footer">
+    <div class="header_pd"></div>
+    <link rel="stylesheet" href="/skin/promotion/AndroidDownPage/css/fullPage.min.css">
+    <link rel="stylesheet" href="/skin/promotion/AndroidDownPage/css/pro-base.min.css">
+    <div id="domePage">
+      <div class="section proPage proPage1"></div>
+      <div class="section proPage proPage2">
+        <div class="poa t1"><img src="/skin/promotion/AndroidDownPage/img/p1.png" alt=""></div>
+        <div class="poa t2"><img src="/skin/promotion/AndroidDownPage/img/p2.png" alt=""></div>
+      </div>
+      <div class="section proPage proPage3">
+        <div class="poa t1"><img src="/skin/promotion/AndroidDownPage/img/p3.png" alt=""></div>
+        <div class="poa t2"><img src="/skin/promotion/AndroidDownPage/img/p4.png" alt=""></div>
+      </div>
+      <div class="section proPage proPage4">
+        <div class="poa t1"><img src="/skin/promotion/AndroidDownPage/img/p5.png" alt=""></div>
+        <div class="poa t2"><img src="/skin/promotion/AndroidDownPage/img/p6.png" alt=""></div>
+        <div class="poa t3"><img src="/skin/promotion/AndroidDownPage/img/p7.png" alt=""></div>
+        <div class="poa t4"><img src="/skin/promotion/AndroidDownPage/img/p8.png" alt=""></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.min.js"></script>
+    <script>
+      $(function () {
+              $('#domePage').fullpage({
+                   anchors: ['firstPage', 'secondPage', 'thirdPage', 'lastPage'],
+                  navigation: true,
+                  controlArrowColor: '#4bc8b6',
+                  css3: true,
+                  afterLoad: function (anchorLink,index) {
+                      console.log(index);
+                      $('.pro-page' + index).addClass('actived').siblings().removeClass('actived');
+                  }
+              });
+          });
+    </script><div id="footer">
     <div class="warp cf">
     <dl>
     <dt>关于大股东</dt>

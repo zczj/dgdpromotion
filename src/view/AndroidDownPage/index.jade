@@ -1,0 +1,43 @@
+extends ../../shared/layout
+block content
+  //- link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.css")
+  link(rel="stylesheet", href="/skin/promotion/AndroidDownPage/css/fullPage.min.css")
+  link(rel="stylesheet", href="/skin/promotion/AndroidDownPage/css/pro-base.min.css")
+  #domePage
+    .section.proPage.proPage1
+    .section.proPage.proPage2
+      .poa.t1
+        img(src="/skin/promotion/AndroidDownPage/img/p1.png", alt="")
+      .poa.t2
+        img(src="/skin/promotion/AndroidDownPage/img/p2.png", alt="")
+    .section.proPage.proPage3
+      .poa.t1
+        img(src="/skin/promotion/AndroidDownPage/img/p3.png", alt="")
+      .poa.t2
+        img(src="/skin/promotion/AndroidDownPage/img/p4.png", alt="")
+    .section.proPage.proPage4
+      .poa.t1
+        img(src="/skin/promotion/AndroidDownPage/img/p5.png", alt="")
+      .poa.t2
+        img(src="/skin/promotion/AndroidDownPage/img/p6.png", alt="")
+      .poa.t3
+        img(src="/skin/promotion/AndroidDownPage/img/p7.png", alt="")
+      .poa.t4
+        img(src="/skin/promotion/AndroidDownPage/img/p8.png", alt="")
+
+
+  //- script(src="/skin/promotion/AndroidDownPage/js/fullpage.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.min.js")
+  script.
+    $(function () {
+            $('#domePage').fullpage({
+                 anchors: ['firstPage', 'secondPage', 'thirdPage', 'lastPage'],
+                navigation: true,
+                controlArrowColor: '#4bc8b6',
+                css3: true,
+                afterLoad: function (anchorLink,index) {
+                    console.log(index);
+                    $('.pro-page' + index).addClass('actived').siblings().removeClass('actived');
+                }
+            });
+        });
