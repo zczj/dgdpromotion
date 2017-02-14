@@ -8,6 +8,9 @@ html,body{
 .pro-banner{
   height: 695px;
   background: url(../img/banner.jpg) center top no-repeat;
+  img{
+    display: none;
+  }
 }
 
 .pro-content{
@@ -21,11 +24,12 @@ html,body{
   padding: 20px 125px;
   font-size: 16px; 
   color:#787e8a;
-  
+ 
 }
 
 .pro-box{
   line-height: 30px;
+  min-height: 1000px;
   .pro-t{
     color:#535a64;
     font-size: 26px;
@@ -52,6 +56,9 @@ html,body{
   }
   p{
     padding-top: 20px;
+    &.pro-name{
+      text-align: right;
+    }
   }
   .pro-con{
     dl,.pro-more{
@@ -95,5 +102,54 @@ html,body{
     border-top: 1px #ccc solid;
     margin-top: 40px;
     padding-top: 20px;
+  }
+}
+
+//小于1100px;
+@media only screen and( max-width: 68.75em){
+  #header,.header_pd,#footer{
+    display: none;
+  }
+  html,body{
+    min-width: 320px;
+  }
+  .pro-content{
+    width: auto;
+  }
+}
+
+@media only screen and( max-width: 50em){
+  
+  .pro-content{
+    padding: 0 15px;
+  }
+  .pro-box {
+    padding-bottom: 40px;
+    .pro-t{
+      font-size: 2rem;
+      height: 50px;
+      line-height: 50px;
+      margin-bottom: 10px;
+    }
+    .pro-b{
+      font-size: 1.6rem;
+    }
+    p{
+      padding-top: 10px;
+    }
+  }
+}
+
+@media only screen and( max-width: 46.875em){
+  .pro-banner{
+    height: auto;
+    background-image: none;
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+  .pro-box{
+    min-height: auto;
   }
 }

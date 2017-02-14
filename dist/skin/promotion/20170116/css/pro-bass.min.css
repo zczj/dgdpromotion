@@ -71,9 +71,11 @@ html, body { background: #f6f7fb; }
 
 .pro-banner { height: 695px; background: url(../img/banner.jpg) center top no-repeat; }
 
+.pro-banner img { display: none; }
+
 .pro-content { width: 1086px; margin: 0 auto; margin-top: 10px; border: 1px #dcdde0 solid; min-height: 500px; border-width: 0 1px; background: #fff; padding: 20px 125px; font-size: 16px; color: #787e8a; }
 
-.pro-box { line-height: 30px; }
+.pro-box { line-height: 30px; min-height: 1000px; }
 
 .pro-box .pro-t { color: #535a64; font-size: 26px; text-align: center; height: 70px; line-height: 70px; position: relative; }
 
@@ -82,6 +84,8 @@ html, body { background: #f6f7fb; }
 .pro-box .pro-b { color: #787e8a; font-size: 18px; font-weight: 700; }
 
 .pro-box p { padding-top: 20px; }
+
+.pro-box p.pro-name { text-align: right; }
 
 .pro-box .pro-con dl, .pro-box .pro-con .pro-more { text-align: center; }
 
@@ -98,3 +102,17 @@ html, body { background: #f6f7fb; }
 .pro-box .pro-con .pro-more a:hover { background: #31db50; color: #fff; text-decoration: none; }
 
 .pro-box.top-line { border-top: 1px #ccc solid; margin-top: 40px; padding-top: 20px; }
+
+@media only screen and (max-width: 68.75em) { #header, .header_pd, #footer { display: none; }
+  html, body { min-width: 320px; }
+  .pro-content { width: auto; } }
+
+@media only screen and (max-width: 50em) { .pro-content { padding: 0 15px; }
+  .pro-box { padding-bottom: 40px; }
+  .pro-box .pro-t { font-size: 2rem; height: 50px; line-height: 50px; margin-bottom: 10px; }
+  .pro-box .pro-b { font-size: 1.6rem; }
+  .pro-box p { padding-top: 10px; } }
+
+@media only screen and (max-width: 46.875em) { .pro-banner { height: auto; background-image: none; }
+  .pro-banner img { width: 100%; display: block; }
+  .pro-box { min-height: auto; } }
